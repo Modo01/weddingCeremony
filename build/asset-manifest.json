@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/weddingCeremony/static/css/main.981f7817.css",
+    "main.js": "/weddingCeremony/static/js/main.052f3206.js",
+    "static/media/Flowers.png": "/weddingCeremony/static/media/Flowers.f83682489c1d5d986dc8.png",
+    "static/media/gift.jpg": "/weddingCeremony/static/media/gift.f9e7daa3aec20e4d8750.jpg",
+    "static/media/surprise.webp": "/weddingCeremony/static/media/surprise.a7a8f9d2ff0ee2b6af2b.webp",
+    "index.html": "/weddingCeremony/index.html",
+    "main.981f7817.css.map": "/weddingCeremony/static/css/main.981f7817.css.map",
+    "main.052f3206.js.map": "/weddingCeremony/static/js/main.052f3206.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.981f7817.css",
+    "static/js/main.052f3206.js"
+  ]
+}

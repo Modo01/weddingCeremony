@@ -13,14 +13,20 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+
       - uses: actions/setup-node@v4
         with:
           node-version: 20
           cache: npm
-      # If you DON'T have package-lock.json, change to: npm install
+
+      # If you DON'T have package-lock.json, change this to: npm install
       - run: npm ci
+
       - run: npm run build
+
+      # SPA fallback so refresh/deep links work
       - run: cp build/index.html build/404.html
+
       - name: Deploy to gh-pages
         uses: peaceiris/actions-gh-pages@v4
         with:

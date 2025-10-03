@@ -1,13 +1,13 @@
 // src/config.js
 export const COUPLE = { bride: "Гүнжээ", groom: "Мөдө" };
 
-export const WEDDING1 = {
-    dateISO: "2025-10-11T12:30:00",
-    churchName: "Найдвар чуулган",
-    venueName: "Найдвар чуулган",
-    venueAddress: "Чингүнжавын гудамж, 6-р хороо, Баянгол дүүрэг, Улаанбаатар",
-    mapQuery: "Naidvar Christiin chuulgan WV8G+4XM, BGD - 2 khoroo, Ulaanbaatar 16050",
-    mapOpenUrl: "https://maps.app.goo.gl/5YHct14MVA5mUbcp7",
+export const WEDDING = {
+    dateISO: "2025-10-11T12:00:00",
+    churchName: "Авралын зар чуулган",
+    venueName: "Авралын зар чуулган",
+    venueAddress: "121, 5-р хороо, Баянгол дүүрэг, Улаанбаатар",
+    mapQuery: "121, BGD - 5 khoroo, Ulaanbaatar 16081",
+    mapOpenUrl: "https://maps.app.goo.gl/cGtrQKZKBU5Hv8st6",
     hashtag: "#Modo&Gunjee2025",
 };
 

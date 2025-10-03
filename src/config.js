@@ -14,7 +14,7 @@ export const WEDDING = {
 export const BANK = {
     bankName: "Хаан банк",
     accountName: "Мөнхдөлгөөн",
-    accountNumber: "590005005090770986",
+    accountNumber: "640005005309263590",
     note: "Гүйлгээний утгад өөрийн нэрээ бичээрэй.",
 };
 

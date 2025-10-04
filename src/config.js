@@ -46,5 +46,4 @@ export const GALLERY = [
     `${process.env.PUBLIC_URL}/images/pic19.jpg`,
     `${process.env.PUBLIC_URL}/images/pic20.jpg`,
     `${process.env.PUBLIC_URL}/images/pic21.jpeg`,
-    `${process.env.PUBLIC_URL}/images/gibly_wedding_2.png`,
 ];

@@ -26,8 +26,25 @@ export const TIMELINE1 = [
 ];
 
 export const GALLERY = [
-    "https://images.unsplash.com/photo-1522673607200-164d1b6ce486?q=80&w=1600",
-    "https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?q=80&w=1600",
-    `${process.env.PUBLIC_URL}/images/gibly_wedding_1.png`,
+    `${process.env.PUBLIC_URL}/images/pic2.jpg`,
+    `${process.env.PUBLIC_URL}/images/pic3.jpg`,
+    `${process.env.PUBLIC_URL}/images/pic4.jpeg`,
+    `${process.env.PUBLIC_URL}/images/pic5.jpg`,
+    `${process.env.PUBLIC_URL}/images/pic6.jpg`,
+    `${process.env.PUBLIC_URL}/images/pic7.jpg`,
+    `${process.env.PUBLIC_URL}/images/pic8.jpg`,
+    `${process.env.PUBLIC_URL}/images/pic9.jpg`,
+    `${process.env.PUBLIC_URL}/images/pic10.jpeg`,
+    `${process.env.PUBLIC_URL}/images/pic11.jpg`,
+    `${process.env.PUBLIC_URL}/images/pic12.jpg`,
+    `${process.env.PUBLIC_URL}/images/pic13.png`,
+    `${process.env.PUBLIC_URL}/images/pic14.jpg`,
+    `${process.env.PUBLIC_URL}/images/pic15.jpg`,
+    `${process.env.PUBLIC_URL}/images/pic16.jpg`,
+    `${process.env.PUBLIC_URL}/images/pic17.jpg`,
+    `${process.env.PUBLIC_URL}/images/pic18.jpg`,
+    `${process.env.PUBLIC_URL}/images/pic19.jpg`,
+    `${process.env.PUBLIC_URL}/images/pic20.jpg`,
+    `${process.env.PUBLIC_URL}/images/pic21.jpeg`,
     `${process.env.PUBLIC_URL}/images/gibly_wedding_2.png`,
 ];

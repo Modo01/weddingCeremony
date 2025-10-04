@@ -340,3 +340,171 @@ body {
 .lightboxContent .galleryItem:hover .galleryOverlay { opacity: 1; }
 .lightboxContent .galleryItem:hover .galleryZoom { transform: translateY(0); }
 
+/* ========== GALLERY (4 visible, slide 1-by-1) ========== */
+
+/* The visible window that masks overflow */
+.galleryViewport {
+  position: relative;
+  overflow: hidden;
+}
+
+/* The long horizontal track that moves left/right */
+.galleryTrack {
+  display: flex;
+  will-change: transform;
+}
+.galleryTrack.with-anim {
+  transition: transform 420ms ease;
+}
+
+/* Each tile is exactly 25% width so 4 are visible at once.
+   We add padding to create the space between pictures. */
+.galleryTile {
+  all: unset;                 /* remove default button styles */
+  box-sizing: border-box;
+  flex: 0 0 25%;
+  padding: 8px;               /* space between pictures (tweak as you like) */
+  aspect-ratio: 1 / 1;
+  cursor: zoom-in;
+}
+
+/* The image itself fills the tile and has a soft hover zoom */
+.galleryTile img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  border-radius: 12px;
+  background: #f4f4f4;
+  transition: transform .25s ease;
+}
+.galleryTile:hover img {
+  transform: scale(1.04);
+}
+
+/* Arrow buttons */
+.galleryArrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 44px;
+  height: 44px;
+  border: none;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.18);
+  font-size: 28px;
+  line-height: 1;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  z-index: 2;
+  transition: transform .15s ease, box-shadow .15s ease, background .15s ease;
+}
+.galleryArrow:hover {
+  transform: translateY(-50%) scale(1.06);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.22);
+}
+.galleryArrow:active {
+  transform: translateY(-50%) scale(0.98);
+}
+.galleryArrow:focus-visible {
+  outline: 2px solid #ff9fbc;   /* pink-ish focus ring */
+  outline-offset: 2px;
+}
+
+.galleryArrow--left  { left: 6px; }
+.galleryArrow--right { right: 6px; }
+
+/* Make arrows easier to tap on small screens (keep 4-up layout intact) */
+@media (max-width: 576px) {
+  .galleryArrow--left  { left: 4px; }
+  .galleryArrow--right { right: 4px; }
+}
+
+/* Optional: reduce motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+  .galleryTrack.with-anim { transition: none; }
+  .galleryTile img { transition: none; }
+}
+
+/* Optional: light polish for section heading accent if you use it */
+.titleAccent {
+  width: 70px;
+  height: 6px;
+  border-radius: 3px;
+  background: linear-gradient(90deg, #ffbfd2, #f7a1b6);
+  vertical-align: middle;
+}
+
+/* Card background (desktop) */
+.sectionCard.storyBg {
+  position: relative;
+  background-size: cover;           /* desktop: fill nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: transparent !important;
+  border: none; box-shadow: none;
+  border-radius: 16px;
+  padding: 0;
+  overflow: hidden;
+}
+
+/* Soft overlay for readability */
+.sectionCard.storyBg::before {
+  content: "";
+  position: absolute; inset: 0;
+  background: linear-gradient(to bottom, rgba(0,0,0,.30), rgba(0,0,0,.45));
+  pointer-events: none; z-index: 0;
+}
+
+/* Inner content block */
+.storyInner {
+  position: relative; z-index: 2;
+  padding: clamp(24px, 6vw, 56px);
+  max-width: 860px; margin: 0 auto;
+  border-radius: 16px;
+  background: rgba(255,255,255,0.06);
+  backdrop-filter: blur(1.5px);
+}
+
+/* Text to white */
+#story .storyInner, #story .storyInner * { color: #fff; }
+.storyTextProse { line-height: 1.75; font-size: clamp(15px,1.05rem,18px); margin: 0; }
+#story .titleAccent {
+  display: block; width: 64px; height: 4px; margin: 8px auto 0;
+  border-radius: 2px; background: #ffffffcc;
+}
+
+/* ===== Phone fix: show full image, no left/right crop ===== */
+.storyBgImg {
+  display: none;                    /* hidden on desktop */
+}
+
+@media (max-width: 576px) {
+  /* Hide desktop background and use an IMG instead */
+  .sectionCard.storyBg {
+    background-image: none !important;
+  }
+
+   .storyBgImg {
+    display: block;
+    position: absolute; inset: 0;
+    width: 100%; height: 100%;
+    object-fit: cover;        /* ← тал талаас нь тайрч тааруулна */
+    object-position: 60% 40%; /* ← төвд барина. Хэрэв баруун тийш бага зэрэг
+                                 зөрүүлэх бол 60% гэх мэт болгож болно */
+    z-index: 1;
+  }
+
+  /* Stronger overlay on phones for readability */
+  .sectionCard.storyBg::before {
+    background: linear-gradient(to bottom, rgba(0,0,0,.40), rgba(0,0,0,.45));
+    z-index: 2;                     /* above the image */
+  }
+
+  /* Tighter padding on small screens */
+  .storyInner {
+    padding: 20px; max-width: 94%; border-radius: 12px;
+  }
+}

@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/weddingCeremony/static/css/main.2aa71175.css",
-    "main.js": "/weddingCeremony/static/js/main.f05fe456.js",
+    "main.js": "/weddingCeremony/static/js/main.cbc91162.js",
     "static/media/pic.jpg": "/weddingCeremony/static/media/pic.caa70589aa21b2a06b3a.jpg",
     "static/media/Flowers.png": "/weddingCeremony/static/media/Flowers.f83682489c1d5d986dc8.png",
     "static/media/gift.jpg": "/weddingCeremony/static/media/gift.f9e7daa3aec20e4d8750.jpg",
     "static/media/surprise.webp": "/weddingCeremony/static/media/surprise.a7a8f9d2ff0ee2b6af2b.webp",
     "index.html": "/weddingCeremony/index.html",
     "main.2aa71175.css.map": "/weddingCeremony/static/css/main.2aa71175.css.map",
-    "main.f05fe456.js.map": "/weddingCeremony/static/js/main.f05fe456.js.map"
+    "main.cbc91162.js.map": "/weddingCeremony/static/js/main.cbc91162.js.map"
   },
   "entrypoints": [
     "static/css/main.2aa71175.css",
-    "static/js/main.f05fe456.js"
+    "static/js/main.cbc91162.js"
   ]
 }
